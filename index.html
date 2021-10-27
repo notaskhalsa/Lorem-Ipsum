@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lorem Ipsum</title>
+</head>
+<body>
+    <section class="section-center">
+        <h1>Tired of boring lorem ipsum</h1>
+        <form class="lorem-form">
+            <label for="amount">paragraphs:</label>
+            <input type="number" name="amount" id="amount" placeholder="5">
+            <button type="submit">generate</button>
+        </form>
+        <article class="lorem-text"></article>
+    </section>
+
+    <script>
+        const text= [
+            `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, eligendi magni! Magnam nisi quod expedita tenetur tempora, quia perferendis dicta! Adipisci molestiae earum officia sapiente quasi cum, harum molestias quod totam, eum, amet tenetur fugit eligendi voluptatibus ut excepturi ratione recusandae debitis! Amet nisi consequatur perferendis consectetur recusandae, tempore et iusto. Nemo, molestias! Neque autem cumque velit accusamus explicabo laudantium aut expedita sequi dolores consequatur, incidunt esse commodi porro iure, veniam quibusdam tempore. Cumque iste fuga laudantium laboriosam voluptates voluptatibus, reiciendis aperiam vel alias dolorem obcaecati repellendus sit dolores modi blanditiis consectetur voluptate reprehenderit maiores, quia nesciunt eum? Quisquam, nisi repellendus error animi quis mollitia vero odio quos, harum reiciendis minus! Labore, nisi minima nostrum fuga explicabo fugiat aperiam adipisci.`,
+            `Hello Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, eligendi magni! Magnam nisi quod expedita tenetur tempora, quia perferendis dicta! Adipisci molestiae earum officia sapiente quasi cum, harum molestias quod totam, eum, amet tenetur fugit eligendi voluptatibus ut excepturi ratione recusandae debitis! Amet nisi consequatur perferendis consectetur recusandae, tempore et iusto. Nemo, molestias! Neque autem cumque velit accusamus explicabo laudantium aut expedita sequi dolores consequatur, incidunt esse commodi porro iure, veniam quibusdam tempore. Cumque iste fuga laudantium laboriosam voluptates voluptatibus, reiciendis aperiam vel alias dolorem obcaecati repellendus sit dolores modi blanditiis consectetur voluptate reprehenderit maiores, quia nesciunt eum? Quisquam, nisi repellendus error animi quis mollitia vero odio quos, harum reiciendis minus! Labore, nisi minima nostrum fuga explicabo fugiat aperiam adipisci.`,
+            `My Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, eligendi magni! Magnam nisi quod expedita tenetur tempora, quia perferendis dicta! Adipisci molestiae earum officia sapiente quasi cum, harum molestias quod totam, eum, amet tenetur fugit eligendi voluptatibus ut excepturi ratione recusandae debitis! Amet nisi consequatur perferendis consectetur recusandae, tempore et iusto. Nemo, molestias! Neque autem cumque velit accusamus explicabo laudantium aut expedita sequi dolores consequatur, incidunt esse commodi porro iure, veniam quibusdam tempore. Cumque iste fuga laudantium laboriosam voluptates voluptatibus, reiciendis aperiam vel alias dolorem obcaecati repellendus sit dolores modi blanditiis consectetur voluptate reprehenderit maiores, quia nesciunt eum? Quisquam, nisi repellendus error animi quis mollitia vero odio quos, harum reiciendis minus! Labore, nisi minima nostrum fuga explicabo fugiat aperiam adipisci.`,
+            `Good Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, eligendi magni! Magnam nisi quod expedita tenetur tempora, quia perferendis dicta! Adipisci molestiae earum officia sapiente quasi cum, harum molestias quod totam, eum, amet tenetur fugit eligendi voluptatibus ut excepturi ratione recusandae debitis! Amet nisi consequatur perferendis consectetur recusandae, tempore et iusto. Nemo, molestias! Neque autem cumque velit accusamus explicabo laudantium aut expedita sequi dolores consequatur, incidunt esse commodi porro iure, veniam quibusdam tempore. Cumque iste fuga laudantium laboriosam voluptates voluptatibus, reiciendis aperiam vel alias dolorem obcaecati repellendus sit dolores modi blanditiis consectetur voluptate reprehenderit maiores, quia nesciunt eum? Quisquam, nisi repellendus error animi quis mollitia vero odio quos, harum reiciendis minus! Labore, nisi minima nostrum fuga explicabo fugiat aperiam adipisci.`,
+            `Friend Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, eligendi magni! Magnam nisi quod expedita tenetur tempora, quia perferendis dicta! Adipisci molestiae earum officia sapiente quasi cum, harum molestias quod totam, eum, amet tenetur fugit eligendi voluptatibus ut excepturi ratione recusandae debitis! Amet nisi consequatur perferendis consectetur recusandae, tempore et iusto. Nemo, molestias! Neque autem cumque velit accusamus explicabo laudantium aut expedita sequi dolores consequatur, incidunt esse commodi porro iure, veniam quibusdam tempore. Cumque iste fuga laudantium laboriosam voluptates voluptatibus, reiciendis aperiam vel alias dolorem obcaecati repellendus sit dolores modi blanditiis consectetur voluptate reprehenderit maiores, quia nesciunt eum? Quisquam, nisi repellendus error animi quis mollitia vero odio quos, harum reiciendis minus! Labore, nisi minima nostrum fuga explicabo fugiat aperiam adipisci.`,
+            `Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, eligendi magni! Magnam nisi quod expedita tenetur tempora, quia perferendis dicta! Adipisci molestiae earum officia sapiente quasi cum, harum molestias quod totam, eum, amet tenetur fugit eligendi voluptatibus ut excepturi ratione recusandae debitis! Amet nisi consequatur perferendis consectetur recusandae, tempore et iusto. Nemo, molestias! Neque autem cumque velit accusamus explicabo laudantium aut expedita sequi dolores consequatur, incidunt esse commodi porro iure, veniam quibusdam tempore. Cumque iste fuga laudantium laboriosam voluptates voluptatibus, reiciendis aperiam vel alias dolorem obcaecati repellendus sit dolores modi blanditiis consectetur voluptate reprehenderit maiores, quia nesciunt eum? Quisquam, nisi repellendus error animi quis mollitia vero odio quos, harum reiciendis minus! Labore, nisi minima nostrum fuga explicabo fugiat aperiam adipisci.`,
+            `How Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, eligendi magni! Magnam nisi quod expedita tenetur tempora, quia perferendis dicta! Adipisci molestiae earum officia sapiente quasi cum, harum molestias quod totam, eum, amet tenetur fugit eligendi voluptatibus ut excepturi ratione recusandae debitis! Amet nisi consequatur perferendis consectetur recusandae, tempore et iusto. Nemo, molestias! Neque autem cumque velit accusamus explicabo laudantium aut expedita sequi dolores consequatur, incidunt esse commodi porro iure, veniam quibusdam tempore. Cumque iste fuga laudantium laboriosam voluptates voluptatibus, reiciendis aperiam vel alias dolorem obcaecati repellendus sit dolores modi blanditiis consectetur voluptate reprehenderit maiores, quia nesciunt eum? Quisquam, nisi repellendus error animi quis mollitia vero odio quos, harum reiciendis minus! Labore, nisi minima nostrum fuga explicabo fugiat aperiam adipisci.`,
+            `Are Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, eligendi magni! Magnam nisi quod expedita tenetur tempora, quia perferendis dicta! Adipisci molestiae earum officia sapiente quasi cum, harum molestias quod totam, eum, amet tenetur fugit eligendi voluptatibus ut excepturi ratione recusandae debitis! Amet nisi consequatur perferendis consectetur recusandae, tempore et iusto. Nemo, molestias! Neque autem cumque velit accusamus explicabo laudantium aut expedita sequi dolores consequatur, incidunt esse commodi porro iure, veniam quibusdam tempore. Cumque iste fuga laudantium laboriosam voluptates voluptatibus, reiciendis aperiam vel alias dolorem obcaecati repellendus sit dolores modi blanditiis consectetur voluptate reprehenderit maiores, quia nesciunt eum? Quisquam, nisi repellendus error animi quis mollitia vero odio quos, harum reiciendis minus! Labore, nisi minima nostrum fuga explicabo fugiat aperiam adipisci.`,
+            `You Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, eligendi magni! Magnam nisi quod expedita tenetur tempora, quia perferendis dicta! Adipisci molestiae earum officia sapiente quasi cum, harum molestias quod totam, eum, amet tenetur fugit eligendi voluptatibus ut excepturi ratione recusandae debitis! Amet nisi consequatur perferendis consectetur recusandae, tempore et iusto. Nemo, molestias! Neque autem cumque velit accusamus explicabo laudantium aut expedita sequi dolores consequatur, incidunt esse commodi porro iure, veniam quibusdam tempore. Cumque iste fuga laudantium laboriosam voluptates voluptatibus, reiciendis aperiam vel alias dolorem obcaecati repellendus sit dolores modi blanditiis consectetur voluptate reprehenderit maiores, quia nesciunt eum? Quisquam, nisi repellendus error animi quis mollitia vero odio quos, harum reiciendis minus! Labore, nisi minima nostrum fuga explicabo fugiat aperiam adipisci.`,   
+        ];
+
+        const form = document.querySelector(".lorem-form");
+        const amount = document.getElementById("amount");
+        const result = document.querySelector(".lorem-text"); 
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            const value =  parseInt(amount.value);
+            const random = Math.floor(Math.random() * text.length);
+
+
+            if(isNaN(value) || value<=0 || value>9){
+                result.innerHTML = `<p class="result">${text[random]}</p>`;
+            }else{
+                let tempText = text.slice(0,value);
+                tempText = tempText.map(function(item){
+                    return  `<p class="result">${text[random]}</p>`;
+                }).join("");
+                result.innerHTML = tempText;
+            }
+        
+        });
+    </script>
+</body>
+</html>
